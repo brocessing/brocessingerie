@@ -1,4 +1,4 @@
-<h1 align="center">brocessing.github.io</h1>
+<h1 align="center"><a href="brocessing.github.io">brocessing.github.io</a></h1>
 <div align="center">
 :earth_africa: Cool stuff by the <a href="https://github.com/brocessing">Brocessing</a> team. :earth_africa:
 </div>
