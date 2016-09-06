@@ -16,8 +16,6 @@ npm install
 - `npm run start -- yourDemo` Run _yourDemo_
 - `npm run build -- yourDemo` Build _yourDemo_
 - `npm run publish -- yourDemo ["custom commit message"]` Publish _yourDemo_ to [brocessing.github.io](https://brocessing.github.io/)
-- `npm run update` Rebuild [brocessing.github.io](https://brocessing.github.io/)'s index
-
 
 ### License
 MIT.
