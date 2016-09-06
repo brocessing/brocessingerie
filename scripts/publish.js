@@ -23,6 +23,7 @@ demo.nameValid(demoName)
   .then((repoPath) => { cacheRepoPath = repoPath })
   .then(() => cache.removeDemo(demoName, cacheRepoPath))
   .then(() => cache.copyDemoFiles(demoName, demoPath, cacheRepoPath))
+  .then(() => sh.exec('node', ['update'], {cwd: cacheRepoPath} ))
   .then(() => sh.exec('git', ['add', '-A'], {cwd: cacheRepoPath} ))
   .then(() => sh.exec('git', ['commit', '-m', commitMessage], {cwd: cacheRepoPath}))
   .catch(e => '') //mute error if there is nothing to commit
