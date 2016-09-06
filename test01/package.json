@@ -1,0 +1,27 @@
+{
+  "name": "test01",
+  "version": "1.0.0",
+  "scripts": {
+    "build-module": "browserify src/index.js > index.js && uglifyjs index.js -c -m > index.min.js",
+    "build-example": "browserify example/index.js > example/bundle.js",
+    "build": "npm run build-module && npm run build-example",
+    "start": "budo index.js:bundle.js --live --dir example"
+  },
+  "main": "index.js",
+  "author": "",
+  "license": "MIT",
+  "directories": {
+    "example": "example"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "browserify": "^13.1.0",
+    "budo": "^9.0.0",
+    "uglify-js": "^2.7.3"
+  },
+  "browserify": {
+    "transform": [
+    ]
+  },
+  "description": ""
+}
