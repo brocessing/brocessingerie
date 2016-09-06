@@ -1,12 +1,15 @@
-brocessing.github.io
-=====
+<h1 align="center"><a href="https://brocessing.github.io">brocessing.github.io</a></h1>
+<div align="center">
+:earth_africa: Cool stuff by the <a href="https://github.com/brocessing">Brocessing</a> team. :earth_africa:
+</div>
 
-🌍 Cool stuff by the [Brocessing](https://github.com/brocessing) team.
+<br/>
 
 ### Installation
 
 ```sh
-git clone https://github.com/brocessing/brocessing.github.io.git && cd brocessing.github.io
+git clone https://github.com/brocessing/brocessing.github.io.git
+cd brocessing.github.io
 npm install
 ```
 
