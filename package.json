@@ -1,0 +1,29 @@
+{
+  "name": "brocessing.github.io",
+  "version": "1.0.1",
+  "description": "Cool stuff by the Brocessing team",
+  "main": "index.js",
+  "scripts": {
+    "start": "node scripts/start.js",
+    "create": "node scripts/create.js",
+    "publish": "node scripts/publish.js",
+    "build": "node scripts/build.js",
+    "update": "node scripts/update.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brocessing/brocessing.github.io.git"
+  },
+  "author": "Brocessing",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brocessing/brocessing.github.io/issues"
+  },
+  "homepage": "https://github.com/brocessing/brocessing.github.io#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "bro-totype": "github:brocessing/bro-totype",
+    "fs-extra": "^0.30.0",
+    "kool-shell": "github:pqml/kool-shell"
+  }
+}
