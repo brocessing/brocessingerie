@@ -270,10 +270,10 @@ var Maze = function () {
   }, {
     key: 'random',
     value: function random(cells) {
-      this.i = this.i + .7 || 1;
+      // this.i = this.i + .7 || 1;
+      // return cells[Math.sin(this.i) > 0 ? 0 : cells.length-1];
       // return cells[Math.floor(Math.abs(Math.sin(Math.cos(this.i))) * cells.length)];
-      // return cells[Math.floor(Math.random() * cells.length)];
-      return cells[Math.sin(this.i) > 0 ? 0 : cells.length - 1];
+      return cells[Math.floor(Math.random() * cells.length)];
     }
 
     // convert a (i,j) position to a 1-dimensionnal array index
