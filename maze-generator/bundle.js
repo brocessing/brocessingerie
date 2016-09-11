@@ -10,8 +10,8 @@ var maze = void 0,
     solver = void 0;
 
 var RESOLUTION = 50;
-var GENERATOR_ITERATION_BY_FRAME = 100;
-var SOLVER_ITERATION_BY_FRAME = 5;
+var GENERATOR_ITERATION_BY_FRAME = 50;
+var SOLVER_ITERATION_BY_FRAME = 1;
 
 function init() {
   var ratio = window.innerWidth / window.innerHeight;

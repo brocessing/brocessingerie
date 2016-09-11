@@ -6,8 +6,8 @@ const colors = ["", "#42dc8e", "#2e43eb", "#ffe359", "#96bfed", "#f5ead6", "#f1f
 let maze, solver;
 
 const RESOLUTION = 50;
-const GENERATOR_ITERATION_BY_FRAME = 100;
-const SOLVER_ITERATION_BY_FRAME = 5;
+const GENERATOR_ITERATION_BY_FRAME = 50;
+const SOLVER_ITERATION_BY_FRAME = 1;
 
 function init() {
   let ratio = window.innerWidth / window.innerHeight;
