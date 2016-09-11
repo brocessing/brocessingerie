@@ -11,14 +11,14 @@ var maze = void 0,
 
 var RESOLUTION = 50;
 var GENERATOR_ITERATION_BY_FRAME = 50;
-var SOLVER_ITERATION_BY_FRAME = 1;
+var SOLVER_ITERATION_BY_FRAME = 10;
 
 function init() {
   var ratio = window.innerWidth / window.innerHeight;
   var cols = ratio > 1 ? Math.floor(RESOLUTION * ratio) : RESOLUTION;
   var rows = ratio < 1 ? Math.floor(RESOLUTION / ratio) : RESOLUTION;
 
-  maze = new mazeGenerator.Maze(cols, rows);
+  maze = new mazeGenerator.Maze(cols, rows, Math.floor(cols / 2), 0);
   solver = null; // solver is set once the maze is solved, see update();
 }
 
@@ -173,21 +173,19 @@ var TOP = 0,
 
 var Maze = function () {
   function Maze(cols, rows) {
-    var i = arguments.length <= 2 || arguments[2] === undefined ? undefined : arguments[2];
-    var j = arguments.length <= 3 || arguments[3] === undefined ? undefined : arguments[3];
+    var i = arguments.length <= 2 || arguments[2] === undefined ? -1 : arguments[2];
+    var j = arguments.length <= 3 || arguments[3] === undefined ? -1 : arguments[3];
 
     _classCallCheck(this, Maze);
 
     this.cols = cols;
     this.rows = rows;
     this.cells = this.populate();
-    if (i !== undefined && j !== undefined) {
-      i = Math.max(0, Math.min(i, this.cols - 1));
-      j = Math.max(0, Math.min(i, this.rows - 1));
-      this.start = this.cells[this.index(i, j)];
-    } else {
-      this.start = this.random(this.cells);
-    }
+
+    i = i === undefined ? Math.floor(Math.random() * cols) : Math.max(0, Math.min(i, cols - 1));
+    j = j === undefined ? Math.floor(Math.random() * rows) : Math.max(0, Math.min(j, rows - 1));
+    this.start = this.cells[this.index(i, j)];
+
     this.currentCell = this.start;
     this.currentCell.visited = true;
   }

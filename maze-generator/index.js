@@ -7,14 +7,14 @@ let maze, solver;
 
 const RESOLUTION = 50;
 const GENERATOR_ITERATION_BY_FRAME = 50;
-const SOLVER_ITERATION_BY_FRAME = 1;
+const SOLVER_ITERATION_BY_FRAME = 10;
 
 function init() {
   let ratio = window.innerWidth / window.innerHeight;
   let cols = (ratio > 1) ? Math.floor(RESOLUTION*ratio) : RESOLUTION;
   let rows = (ratio < 1) ? Math.floor(RESOLUTION/ratio) : RESOLUTION;
 
-  maze = new mazeGenerator.Maze(cols, rows);
+  maze = new mazeGenerator.Maze(cols, rows, Math.floor(cols / 2), 0);
   solver = null; // solver is set once the maze is solved, see update();
 }
 
