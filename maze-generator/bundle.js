@@ -9,7 +9,7 @@ var colors = ["", "#42dc8e", "#2e43eb", "#ffe359", "#96bfed", "#f5ead6", "#f1f3f
 var maze = void 0,
     solver = void 0;
 
-var RESOLUTION = 100;
+var RESOLUTION = 50;
 var GENERATOR_ITERATION_BY_FRAME = 100;
 var SOLVER_ITERATION_BY_FRAME = 5;
 
