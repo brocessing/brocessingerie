@@ -15,17 +15,15 @@ const
 
 // this class must stay agnostic
 class Maze {
-  constructor(cols, rows, i = undefined, j = undefined) {
+  constructor(cols, rows, i = -1, j = -1) {
     this.cols = cols;
     this.rows = rows;
     this.cells = this.populate();
-    if (i !== undefined && j !== undefined) {
-      i = Math.max(0, Math.min(i, this.cols - 1));
-      j = Math.max(0, Math.min(i, this.rows - 1));
-      this.start = this.cells[this.index(i, j)]
-    } else {
-      this.start = this.random(this.cells);
-    }
+
+    i = (i === undefined) ? Math.floor(Math.random() * cols) : Math.max(0, Math.min(i, cols - 1));
+    j = (j === undefined) ? Math.floor(Math.random() * rows) : Math.max(0, Math.min(j, rows - 1));
+    this.start = this.cells[this.index(i, j)]
+
     this.currentCell = this.start;
     this.currentCell.visited = true;
   }
