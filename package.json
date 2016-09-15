@@ -19,6 +19,7 @@
     "url": "https://github.com/brocessing/brocessing.github.io/issues"
   },
   "homepage": "https://github.com/brocessing/brocessing.github.io#readme",
+  "private": true,
   "dependencies": {},
   "devDependencies": {
     "bro-totype": "github:brocessing/bro-totype",
